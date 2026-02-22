@@ -1,0 +1,18 @@
+{
+  "id": 1,
+  "category": {
+    "id": 1,
+    "name": "string"
+  },
+  "name": "Renzo",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 2,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}

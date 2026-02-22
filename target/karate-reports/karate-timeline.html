@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"examples\/users\/users[3.1:78]","start":1771709167243,"end":1771709168363,"title":"examples\/users\/users[3.1:78] 16:26:07.243-16:26:08.363 Buscar por estado"},{"id":2,"group":1,"content":"examples\/users\/users[3.2:79]","start":1771709168380,"end":1771709168775,"title":"examples\/users\/users[3.2:79] 16:26:08.380-16:26:08.775 Buscar por estado"},{"id":3,"group":1,"content":"examples\/users\/users[3.3:80]","start":1771709168781,"end":1771709169171,"title":"examples\/users\/users[3.3:80] 16:26:08.781-16:26:09.171 Buscar por estado"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
